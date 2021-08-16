@@ -1,0 +1,395 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+	{% block title %}
+	{% if dept %}
+	 <title>{{dept.name}}.Health Lab</title>
+	{% else %}
+    <title>Health Lab</title>
+	{% endif %}
+	{% endblock %}
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{% static 'css/pogo-slider.min.css' %}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+	<!-- LOADER -->
+     <!-- <div id="preloader">
+		<div class="loader">
+			<img src="images/preloader.gif" alt="" />
+		</div>
+    </div>end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start top bar -->
+	<div class="main-top" style="background: #12557f;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+				</div>
+				<div class="col-lg-6">
+					<div class="wel-nots" style="float: right;margin-left: 20px;">
+						<p style="font-size: 16px;color: #ffffff;padding: 12px 0px;margin: 0px;">Welcome to Our Health Lab!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End top bar -->
+	
+	<!-- Start header -->
+	<header class="top-header" style="background: #ffffff;position: relative;top: 0px;left: 0px;width: 100%;margin: 0 auto;z-index: 20;">
+		<nav class="navbar header-nav navbar-expand-lg"  style="padding: 5px 0px;">
+            <div class="container">
+				<a class="navbar-brand" href="/"><img src="{% static 'images/logo1.png' %}" alt="image"></a>
+				<button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav" style="text-transform: uppercase;font-size: 14px;padding: 10px 15px;position: relative;font-weight: 500;">
+                        <li ><a class="nav-link active" href="/">Home</a></li>
+                        <li><a class="nav-link" href="#about">About Us</a></li>
+
+<!--						<li><a class="nav-link" href="#team">Doctor</a></li>-->
+						<a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Doctor   </a>
+
+
+
+
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+							  <a class="dropdown-item">CARDIOLOGIST </a>
+								   <ul class="sub-menu" style="text-transform:capitalize;padding: 5px 5px;position: relative;">
+                                     <li ><a href="#" >Adam Taylor</a></li>
+                                        <li><a href="#">Williamson</a></li>
+								  </ul>
+<!--                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+							  <a class="dropdown-item"> DERMATOLOGIST</a>
+								   <ul class="sub-menu" style="text-transform:capitalize;padding: 5px 5px;position: relative;">
+                                     <li ><a href="#">Alice Thomas</a></li>
+                                        <li><a href="#">Andrea</a></li>
+								  </ul>
+
+						      <a class="dropdown-item">NEUROLOGIST</a>
+								   <ul class="sub-menu" style="text-transform:capitalize;padding: 5px 5px;position: relative;">
+                                     <li ><a href="#">Alison davis</a></li>
+                                        <li><a href="#">Jacqueline</a></li>
+								  </ul>
+								   </div>
+						<li><a class="nav-link" href="#appointment">Appointment</a></li>
+
+					</ul>
+						</div>
+            </div>
+        </nav>
+	</header>
+	<!-- End header -->
+	
+	<!-- Start Banner -->
+	<div class="home-slider" style="position: relative;
+	height: 100%;">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="pogoSlider" id="js-main-slider">
+					<div class="pogoSlider-slide"  style="background-image:url({% static 'images/slider-03.jpg' %});">
+						<div class="lbox-caption pogoSlider-slide-element" >
+							<div class="lbox-details" style="display: table-cell;text-align: center;vertical-align: middle;position: absolute;top: 0px;
+	                                                         left: 0;right: 0;height: 100%;padding: 22% 0%;">
+								<h1 style="font-size: 54px;font-family: 'Catamaran', sans-serif;color:#339966;font-weight: 600;position: relative;z-index:2;">
+									Welcome to Health Lab</h1>
+<!--								<p style="color: #ffffff;position: relative;z-index:3;">Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum </p>-->
+<!--								<a href="#" class="btn">Contact Us</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url({% static 'images/slider-02.jpg' %});">
+						<div class="lbox-caption pogoSlider-slide-element">
+							<div class="lbox-details" style="display: table-cell;text-align: center;vertical-align: middle;position: absolute;top: 0px;
+	                                                         left: 0;right: 0;height: 100%;padding: 22% 0%;">>
+								<h1 style="font-size: 54px;font-family: 'Catamaran', sans-serif;color:#456297;font-weight: 600;position: relative;z-index:2;">
+									We are Expert in The Field of Health Lab</h1>
+<!--								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum</p>-->
+<!--								<a href="#appointment" class="btn">Appointment</a>-->
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+	
+	<!-- Start About us -->
+	<div id="about" class="about-box" style="padding: 70px 0px;">
+		<div class="about-a1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title-box" style="text-align:center;margin-bottom: 30px;">
+							<h2 style =	"font-size: 42px; font-family:'Catamaran', sans-serif;color: #222222;font-weight: 500;position: relative;padding-bottom: 5px;margin-bottom: 15px;">About Us</h2>
+								<img src="{% static 'images/tag-line.png' %}" style="no-repeat center;width: 120px;height:20px;bottom: 0;left: 0;right: 0;margin: 0 auto;">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="row align-items-center about-main-info" >
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<h2 style="font-size: 40px;font-family: 'Catamaran', sans-serif;"> Welcome to Health Lab </h2>
+								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+<!--								<a href="#" class="new-btn-d br-2">Read More</a>-->
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<div class="about-m" style="border: 2px solid #00cb86;box-shadow: 0 10px 25px 0 rgba(0,0,40,.2);">
+									<ul id="banner" style="position: relative; width: 100%;height: 450px;overflow: hidden;margin: 0 auto;">
+										<li style="	visibility: hidden; width: 100%; position: absolute;top: 0;left: 0;">
+											<img src="{% static 'images/about-img-01.jpg' %}" alt="">
+										</li>
+										<li  style="position: absolute;top: 0;left: 0;">
+											<img src="{% static 'images/about-img-02.jpg' %}" alt="">
+										</li>
+										<li style="position: absolute;top: 0;left: 0;">
+											<img src="{% static 'images/about-img-03.jpg' %}" alt="">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About us -->
+
+	<!-- Start Team -->
+	<div id="team" class="team-box" style="padding: 70px 0px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box" style="text-align: center;margin-bottom: 30px;">
+						<h2 style="font-size: 40px;font-family: 'Catamaran', sans-serif;" >Our Doctor</h2>
+						<img src="{% static 'images/tag-line.png' %}" style="no-repeat center;width: 120px;height:20px;bottom: 0;left: 0;right: 0;margin: 0 auto;">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+                   				{% for dept in links %}
+
+			<a href="{{dept.get_url}}" style=" font: 700 17px 'Open Sans', sans-serif;color: #456297;text-decoration: none;
+                                          text-align: center;margin-bottom :3px;font-style:normal;"> {{dept.name}}</a>
+			{% endfor %}
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="row">
+					{% for doctor in doctor %}
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="our-team" style="text-align: center; overflow: hidden;position: relative; z-index: 1;">
+                        <div class="pic" style="margin: 8px;position: relative; border: 3px solid #00cb86;transition: all 0.5s ease 0s;text:view profile;">
+							<a href="{{doctor.get_url}}"><img src="{{doctor.image.url}}" style="height:300px;" alt=""></a>
+
+                        </div>
+                        <div class="team-content">
+
+                            <h3 class="title" >{{doctor.name}}</h3>
+                            <span class="post">{{doctor.dept}}</span>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+					 {% endfor %}
+            </div>
+			
+		</div>
+	</div>
+	
+	<!-- End Team -->
+
+	<!-- Start Appointment -->
+	<div id="appointment" class="appointment-main" style="padding: 70px 0px;position: relative";>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box" style="text-align: center;margin-bottom: 30px;">
+						<h2 style="font-size: 40px;font-family: 'Catamaran', sans-serif;">Appointment</h2>
+							<img src="{% static 'images/tag-line.png' %}" style="no-repeat center;width: 120px;height:20px;bottom: 0;left: 0;right: 0;margin: 0 auto;">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="well-block">
+                        <div class="well-title">
+                            <h2 style="font-size: 32px;font-weight: 600;padding-bottom: 20px;">Book an Appointment</h2>
+                        </div>
+                        <form>
+                            <!-- Form start -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" >
+                                        <label class="control-label" style="font-size: 16px;" for="name">Name</label>
+                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" style="min-height: 60px;min-height: 50px;padding: 0px 15px;border-radius: 0;color: #12557f;border: 1px solid #12557f;">
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" style="font-size: 16px;" for="email">Email</label>
+                                        <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md" style="min-height: 60px;min-height: 50px;padding: 0px 15px;border-radius: 0;color: #12557f;border: 1px solid #12557f;">
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" style="font-size: 16px;"for="date">Preferred Date</label>
+                                        <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md" style="min-height: 60px;min-height: 50px;padding: 0px 15px;border-radius: 0;color: #12557f;border: 1px solid #12557f;">
+                                    </div>
+                                </div>
+                                <!-- Select Basic -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" style="font-size: 16px;" for="time">Preferred Time</label>
+                                        <select id="time" name="time" class="form-control" style="min-height: 60px;min-height: 50px;padding: 0px 15px;border-radius: 0;color: #12557f;border: 1px solid #12557f;">
+                                            <option value="8:00 to 9:00">8:00 to 9:00</option>
+                                            <option value="9:00 to 10:00">9:00 to 10:00</option>
+                                            <option value="10:00 to 1:00">10:00 to 1:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Select Basic -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" style="font-size: 16px;" for="appointmentfor">Department</label>
+                                        <select id="appointmentfor" name="appointmentfor" class="form-control" style="min-height: 60px;min-height: 50px;padding: 0px 15px;border-radius: 0;color: #12557f;border: 1px solid #12557f;">
+                                            <option value="Choose Department">Choose Department</option>
+											<option value="Cardiologist">Cardiologist</option>
+											<option value="Dermatologist">Dermatologist</option>
+											<option value="Neurologist">Neurologist</option>
+<!--											<option value="Anesthesiology">Anesthesiology</option>-->
+<!--											<option value="Ayurvedic">Ayurvedic</option>-->
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Button -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+
+                                        <button id="singlebutton" name="singlebutton" class="new-btn-d br-2" style="border: 2px solid #12557f;border-radius: 2px;transition: .2s;letter-spacing: 1px;padding: 10px 18px;background: #ffffff;color: #12557f;display: inline-block;line-height: 24px;cursor: pointer; background: rgba(18,85,127,0.2);">Make An Appointment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- form end -->
+                    </div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="well-block">
+                        <div class="well-title" >
+                            <h2 style="	font-size: 32px;font-weight: 600;padding-bottom: 20px;">Why Appointment with Us</h2>
+                        </div>
+                        <div class="feature-block">
+                            <div class="feature feature-blurb-text">
+                                <h4 class="feature-title" style="font-size: 20px;">24/7 Hours Available</h4>
+                                <div class="feature-content">
+                                    <p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
+                                </div>
+                            </div>
+                            <div class="feature feature-blurb-text">
+                                <h4 class="feature-title" style="font-size: 20px;">Experienced Staff Available</h4>
+                                <div class="feature-content">
+                                    <p>Aliquam sit amet mi eu libero fermentum bibendum pulvinar a turpis. Vestibulum quis feugiat risus. </p>
+                                </div>
+                            </div>
+                            <div class="feature feature-blurb-text">
+                                <h4 class="feature-title" style="font-size: 20px;">Low Price & Fees</h4>
+                                <div class="feature-content">
+                                    <p>Praesent eu sollicitudin nunc. Cras malesuada vel nisi consequat pretium. Integer auctor elementum nulla suscipit in.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Appointment -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-box" style="background: #292f35;padding: 20px 0;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name" style="text-align: center;margin: 0px;color: #ffffff;">All Rights Reserved. &copy; <a href="#" style="color: #00cb86;">Health Lab</a> </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="scroll-to-top" class="new-btn-d br-2" style="position:fixed; bottom: 40px; right: 40px;z-index: 9999; width: 32px;height: 32px;text-align: center;line-height: 5px;
+     background: #57cef8;color: #ffffff;cursor: pointer;border: 0;border-radius: 0px;text-decoration: none;transition: opacity 0.2s ease-out;font-size: 28px;">
+		<i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.pogo-slider.min.js' %}"></script>
+	<script src="{% static 'js/slider-index.j' %}s"></script>
+	<script src="{% static 'js/smoothscroll.js' %}"></script>
+	<script src="{% static 'js/TweenMax.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+	<script src="{% static 'js/isotope.min.js' %}"></script>
+	<script src="{% static 'js/images-loded.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

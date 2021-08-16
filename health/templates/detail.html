@@ -1,0 +1,114 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>Health Lab</title>
+<!--    <meta name="keywords" content="">-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="author" content="">-->
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{% static 'css/pogo-slider.min.css' %}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+ 	<div class="main-top" style="background: #12557f;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+
+                    </div>
+				<div class="col-lg-6">
+					<div class="wel-nots" style="float: right;margin-left: 20px;">
+						<p style="font-size: 16px;color: #ffffff;padding: 12px 0px;margin: 0px;">Welcome to Our Health Lab!</p>
+					</div>
+                    	</div>
+			</div>
+		</div>
+	</div>
+    <header class="top-header" style="background: #ffffff;position:relative;top: 0px;left: 0px;width: 100%;margin: 0 auto;z-index: 20;">
+		<nav class="navbar header-nav navbar-expand-lg"  style="padding: 5px 0px;">
+            <div class="container">
+				<a class="navbar-brand" href='/'><img src="{% static 'images/logo1.png' %}" alt="image"></a>
+				<button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav" style="text-transform: uppercase;font-size: 14px;padding: 10px 15px;position: relative;font-weight: 500;">
+                        <li ><a class="nav-link active" href="/">Home</a></li>
+
+					</ul>
+						</div>
+            </div>
+
+        </nav>
+	</header>
+
+    <div >
+      <h2 style= "color: #000000;font-weight: 700;font-size: 24px;margin-top:50px;margin:40px 200px 5px 200px;">{{doc.name}}</h2>
+        <h3 style="font-weight: 700;font-size: 18px;margin:5px 200px -30px 200px;">{{doc.dept}}</h3>
+		 <p style=" font-size: 16px;margin-bottom:20px;margin:40px 200px 15px 200px;text-align:justify;" >{{doc.detail}}</p>
+<!--		<h4 style="color:  #000000;font-weight: 700;font-size: 18px;">APPOINTMENT TIME:{{doc.appointment}}-{{doc.appointment}}</h4>-->
+                </div>
+
+<!-- Start Footer -->
+<!--	<footer class="footer-box" style="background: #292f35;padding: 20px 0;">-->
+<!--		<div class="container">-->
+<!--			<div class="row">-->
+<!--				<div class="col-lg-12">-->
+<!--					<p class="footer-company-name" style="text-align: center;margin: 0px;color: #ffffff;">All Rights Reserved. &copy; <a href="#" style="color: #00cb86;">Health Lab</a> </p>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</footer>-->
+
+
+	<a href="#" id="scroll-to-top" class="new-btn-d br-2" style="position:fixed; bottom: 40px; right: 40px;z-index: 9999; width: 32px;height: 32px;text-align: center;line-height: 5px;
+     background: #57cef8;color: #ffffff;cursor: pointer;border: 0;border-radius: 0px;text-decoration: none;transition: opacity 0.2s ease-out;font-size: 28px;">
+		<i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.pogo-slider.min.js' %}"></script>
+	<script src="{% static 'js/slider-index.j' %}s"></script>
+	<script src="{% static 'js/smoothscroll.js' %}"></script>
+	<script src="{% static 'js/TweenMax.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+	<script src="{% static 'js/isotope.min.js' %}"></script>
+	<script src="{% static 'js/images-loded.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
